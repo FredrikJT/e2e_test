@@ -7,4 +7,4 @@ branches:
   only:
     - e2e_test
     
-script: $(ng e2e)
+script: ./node_modules/.bin/ng e2e
