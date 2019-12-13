@@ -7,3 +7,4 @@ branches:
   only:
     - e2e_test
     
+script: $(ng e2e)
