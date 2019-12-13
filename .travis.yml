@@ -6,5 +6,7 @@ language: node_js
 branches:
   only:
     - e2e_test
+
+install: echo hejhej
     
 script: ./node_modules/.bin/ng e2e
