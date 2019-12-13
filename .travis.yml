@@ -1,24 +1,13 @@
+os: linux
+dist: xenial
+language: node_js
 
-language: python
-
-python:
-
-  - "2.7"
-
-script: 
-
-  - python hello.py
-
-# os: linux
-# dist: xenial
-# language: node_js
-
-# branches:
-#   only:
-#     - e2e_test
+branches:
+  only:
+    - master
 
 
-# script: - ./hello.sh
+script: - ./hello.sh
 # install: echo hejhej
     
 # script: ./node_modules/.bin/ng e2e
