@@ -19,10 +19,8 @@
     "@angular/platform-browser": "~8.2.9",
     "@angular/platform-browser-dynamic": "~8.2.9",
     "@angular/router": "~8.2.9",
-    "protractor-retry": "^1.2.9",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "webdriver-manager": "^12.1.7",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -42,6 +40,8 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "^5.4.2",
+    "protractor-retry": "^1.2.9",
+    "selenium": "^2.20.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"

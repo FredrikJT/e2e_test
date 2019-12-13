@@ -12,14 +12,20 @@ exports.config = {
     './src/**/*.e2e-spec.ts'
   ],
 
-  sauceUser: process.env.SAUCE_USERNAME,
-  sauceKey: process.env.SAUCE_ACCESS_KEY,
-  browserstackUser: process.env.BROWSERSTACK_USERNAME,
-  browserstackKey: process.env.BROWSERSTACK_ACCESS_KEY,
+  // sauceUser: process.env.SAUCE_USERNAME,
+  // sauceKey: process.env.SAUCE_ACCESS_KEY,
+  // browserstackUser: process.env.BROWSERSTACK_USERNAME,
+  // browserstackKey: process.env.BROWSERSTACK_ACCESS_KEY,
   sauceRegion: 'eu',
   capabilities: {
     'extendedDebugging' : 'true',
     'browserName': 'chrome',
+    chromeOptions: {
+      args: [
+        '--headless',
+        '--disable-gpu'
+      ]
+    },
     // 'platformName': 'Windows 10' // Saucelabs
     'os': 'Windows',
     'os_version': '10',
