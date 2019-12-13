@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 COUNTER=0
-while [  $COUNTER -lt 100 ]; do
+while [  $COUNTER -lt 1000 ]; do
     echo The counter is $COUNTER
     let COUNTER=COUNTER+1
-    ng e2e ;
+    ng e2e --webdriverUpdate=false;
     
     if [ $? ] ; then
         echo "e2e success"

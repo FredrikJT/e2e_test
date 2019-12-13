@@ -14,16 +14,18 @@ exports.config = {
 
   // sauceUser: process.env.SAUCE_USERNAME,
   // sauceKey: process.env.SAUCE_ACCESS_KEY,
-  // browserstackUser: process.env.BROWSERSTACK_USERNAME,
-  // browserstackKey: process.env.BROWSERSTACK_ACCESS_KEY,
+  browserstackUser: process.env.BROWSERSTACK_USERNAME,
+  browserstackKey: process.env.BROWSERSTACK_ACCESS_KEY,
   sauceRegion: 'eu',
   capabilities: {
     'extendedDebugging' : 'true',
     'browserName': 'chrome',
-    chromeOptions: {
-      args: [
-        '--headless',
-        '--disable-gpu'
+    'chromeOptions': {
+      'args': [
+        // '--headless',
+        // '--disable-gpu',
+        // '--no-sandbox',
+        // '--window-size=1920,1080'
       ]
     },
     // 'platformName': 'Windows 10' // Saucelabs
