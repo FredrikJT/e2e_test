@@ -2,11 +2,6 @@ os: linux
 dist: xenial
 language: node_js
 
-branches:
-  only:
-    - master
-
-
 script: - ./hello.sh
 # install: echo hejhej
     
