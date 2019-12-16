@@ -16,6 +16,7 @@ cache:
 
 install:
   - npm install
+  - ./node_modules/protractor/bin/webdriver-manager update
 
 script:
   - npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
