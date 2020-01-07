@@ -15,77 +15,16 @@ const BD = browser.driver;
 describe('Auth0', async () => {
   it('should have email field displayed and enabled.', async () => {
     const appUrl = 'https://git-fjot-env.drive.tobiicloud.com/drive/';
-    // const appUrl = 'https://intoli.com/blog/making-chrome-headless-undetectable/chrome-headless-test.html';
     console.log(`appUrl: ${appUrl}`);
-    // browser.
-    // await page.setUserAgent(
-    //   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ' +
-    //   'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
-    //   );
     await BD.get(appUrl);
     const currentUrl = await BD.getCurrentUrl();
     expect(currentUrl.includes('login.tobii')).toBe(true);
-    // expect(currentUrl.includes('intoli.com')).toBe(true);
-    // await browser.sleep(120000);
-    await browser.takeScreenshot().then((png) => {
-      writeScreenShot(png, 'foo.png');
-    });
-
-    // browser.executeScript(() => {
-    //   console.log(window.navigator.userAgent);
-    // });
-
-
-    // let result = await browser.executeScript(() => {
-    //   return window.navigator.userAgent;
-    // });
-
-    // console.log('userAgent: ' + result);
-
-    // let result2 = await browser.executeScript(() => {
-    //   return window.navigator.platform;
-    // });
-
-    // console.log('platform: ' + result2);
-
-    // let result3 = await browser.executeScript(() => {
-    //   return window.navigator;
-    // });
-
-    // console.log('navigator: ' + util.inspect(result3));
-
-    // browser.driver.executeScript(function() { return api.Version; }).then(function(result) { console.log('API version: ' + result); });
-
-    // await browser.sleep(120000);
-
-    // let browserLogs = browser.manage().logs().get('server');
-    // console.log("Browserlogs: " + util.inspect(browserLogs));
-    
-    // browser.manage().logs().get('browser').then(
-    //   function(browserLog) {
-    //     console.log('log: ' + 
-    //       require('util').inspect(browserLog));
-    //   }
-    // );
-    // browser.manage().logs().get('driver').then(
-    //   function(browserLog) {
-    //     console.log('log: ' + 
-    //       require('util').inspect(browserLog));
-    //   }
-    // );
-    // browser.manage().logs().get('server').then(
-    //   function(browserLog) {
-    //     console.log('log: ' + 
-    //       require('util').inspect(browserLog));
-    //   }
-    // );
-    
-    // const emailInputLocator = By.css('input[name=email]');
-    // await BD.wait<void>(
-    //   () => isLocatorInteractable(emailInputLocator),
-    //   10000,
-    //   `Timed out waiting for locator ${emailInputLocator} to be interactable`
-    // );
+    const emailInputLocator = By.css('input[name=email]');
+    await BD.wait<void>(
+      () => isLocatorInteractable(emailInputLocator),
+      10000,
+      `Timed out waiting for locator ${emailInputLocator} to be interactable`
+    );
   });
 });
 
