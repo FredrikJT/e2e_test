@@ -16,15 +16,26 @@ exports.config = {
   // sauceKey: process.env.SAUCE_ACCESS_KEY,
   // browserstackUser: process.env.BROWSERSTACK_USERNAME,
   // browserstackKey: process.env.BROWSERSTACK_ACCESS_KEY,
-  sauceRegion: 'eu',
+  // sauceRegion: 'eu',
   capabilities: {
     'extendedDebugging' : 'true',
     'browserName': 'chrome',
     chromeOptions: {
       args: [
+
+        // '--headless',
+        // '--no-sandbox',
+        '--remote-debugging-port=9222',
+        // 'platform=hejhej',
+        // '--user-agent=Chrome',
         '--headless',
-        '--disable-gpu'
+        '--no-sandbox'
       ]
+    },
+    loggingPrefs: {
+      browser: 'SEVERE',
+      driver: 'SEVERE',
+      performance: 'SEVERE',
     },
     // 'platformName': 'Windows 10' // Saucelabs
     'os': 'Windows',
