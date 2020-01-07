@@ -23,8 +23,6 @@ exports.config = {
     chromeOptions: {
       args: [
 
-        // '--headless',
-        // '--no-sandbox',
         '--remote-debugging-port=9222',
         // 'platform=hejhej',
         // '--user-agent=Chrome',
@@ -33,15 +31,16 @@ exports.config = {
       ]
     },
     loggingPrefs: {
-      browser: 'SEVERE',
-      driver: 'SEVERE',
-      performance: 'SEVERE',
+      browser: 'WARNING',
+      driver: 'WARNING',
+      performance: 'WARNING',
     },
     // 'platformName': 'Windows 10' // Saucelabs
     'os': 'Windows',
     'os_version': '10',
     'build': 'Small repo'
   },
+  logLevel: 'WARN',
 
   directConnect: false,
   baseUrl: 'https://git-fjot-env.drive.tobiicloud.com/drive/',
